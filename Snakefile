@@ -32,7 +32,7 @@ rule download:
     output:
         sequences = "data/ncov.fasta"
     params:
-        fasta_fields = "strain virus accession collection_date region country location locus host originating_lab submitting_lab authors url title journal puburls"
+        fasta_fields = "strain virus gisaid_epi_isl genbank_accession collection_date region country division location locus host originating_lab submitting_lab authors url title journal puburls"
     shell:
         """
         python3 ../fauna/vdb/download.py \
@@ -42,9 +42,8 @@ rule download:
             --resolve_method choose_genbank \
             --path $(dirname {output.sequences}) \
             --fstem $(basename {output.sequences} .fasta)
-        sed -i -e 's/BetaCoV\///g' data/ncov.fasta
-        sed -i -e 's/2019-nCoV_//g' data/ncov.fasta
-        sed -i -e 's/2019-nCoV\///g' data/ncov.fasta
+        sed -i -e 's/BetaCoV[\/_ ]//g' data/ncov.fasta
+        sed -i -e 's/2019-nCoV[\/_ ]//g' data/ncov.fasta
         """
 
 rule parse:
@@ -55,8 +54,8 @@ rule parse:
         sequences = "data/sequences.fasta",
         metadata = "data/metadata.tsv"
     params:
-        fasta_fields = "strain virus accession date region country location segment host originating_lab submitting_lab authors url title",
-        prettify_fields = "region country location"
+        fasta_fields = "strain virus gisaid_epi_isl genbank_accession date region country division location segment host originating_lab submitting_lab authors url title",
+        prettify_fields = "region country division location"
     shell:
         """
         augur parse \
@@ -176,8 +175,8 @@ rule refine:
         node_data = "results/branch_lengths.json"
     params:
         root = "Wuhan/WIV04/2019 Wuhan/WIV06/2019",
-        clock_rate = 0.00035,
-        clock_std_dev = 0.00015,
+        clock_rate = 0.0005,
+        clock_std_dev = 0.0003,
         coalescent = "skyline",
         date_inference = "marginal",
         divergence_unit = "mutations"
@@ -248,7 +247,7 @@ rule export:
         lat_longs = files.lat_longs,
         description = files.description
     output:
-        auspice_json = "auspice/ncov.json"
+        auspice_json = "results/ncov_with_accessions.json"
     shell:
         """
         augur export v2 \
@@ -262,7 +261,7 @@ rule export:
             --output {output.auspice_json}
         """
 
-rule gisaid_export:
+rule export_gisaid:
     message: "Exporting data files for for auspice"
     input:
         tree = rules.refine.output.tree,
@@ -275,7 +274,7 @@ rule gisaid_export:
         lat_longs = files.lat_longs,
         description = files.description
     output:
-        auspice_json = "auspice/ncov_gisaid.json"
+        auspice_json = "results/ncov_gisaid_with_accessions.json"
     shell:
         """
         augur export v2 \
@@ -289,7 +288,7 @@ rule gisaid_export:
             --output {output.auspice_json}
         """
 
-rule chinese_language_export:
+rule export_zh:
     message: "Exporting data files for for auspice"
     input:
         tree = rules.refine.output.tree,
@@ -302,7 +301,7 @@ rule chinese_language_export:
         lat_longs = files.lat_longs,
         description = files.description_zh
     output:
-        auspice_json = "auspice/ncov_zh.json"
+        auspice_json = "results/ncov_zh_with_accessions.json"
     shell:
         """
         augur export v2 \
@@ -313,6 +312,45 @@ rule chinese_language_export:
             --colors {input.colors} \
             --lat-longs {input.lat_longs} \
             --description {input.description} \
+            --output {output.auspice_json}
+        """
+
+rule fix_colorings:
+    message: "Remove extraneous colorings"
+    input:
+        auspice_json = rules.export.output.auspice_json
+    output:
+        auspice_json = "auspice/ncov.json"
+    shell:
+        """
+        python scripts/fix-colorings.py \
+            --input {input.auspice_json} \
+            --output {output.auspice_json}
+        """
+
+rule fix_colorings_gisaid:
+    message: "Remove extraneous colorings"
+    input:
+        auspice_json = rules.export_gisaid.output.auspice_json
+    output:
+        auspice_json = "auspice/ncov_gisaid.json"
+    shell:
+        """
+        python scripts/fix-colorings.py \
+            --input {input.auspice_json} \
+            --output {output.auspice_json}
+        """
+
+rule fix_colorings_zh:
+    message: "Remove extraneous colorings"
+    input:
+        auspice_json = rules.export_zh.output.auspice_json
+    output:
+        auspice_json = "auspice/ncov_zh.json"
+    shell:
+        """
+        python scripts/fix-colorings.py \
+            --input {input.auspice_json} \
             --output {output.auspice_json}
         """
 
@@ -342,7 +380,7 @@ rule poisson_tmrca:
 rule branching_process_R0:
     params:
         infectious_period = 10, # days
-        population = [600, 3000, 15000],
+        population = [6000, 30000, 150000],
         start_recent = "2019-12-01",
         start_early = "2019-11-01"
     output:
