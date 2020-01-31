@@ -133,7 +133,7 @@ Estimates of growth rate should fall into aligment with the true value, but we s
 
 All analysis and simulation code can be found at my fork of the nextstrain/ncov repository here:
 
-[https://github.com/emvolz/ncov](https://github.com/emvolz/ncov)
+[https://github.com/emvolz/ncov/ranalyses](https://github.com/emvolz/ncov/ranalyses)
 
 
 # Acknowledgements 
