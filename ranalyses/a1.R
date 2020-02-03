@@ -1,7 +1,7 @@
 library( treedater ) 
 library( lubridate )
 
-tr <- read.tree( 'tree_raw.nwk' )
+tr <- read.tree( '../results/tree_raw.nwk' )
 md <- read.table( '../data/metadata.tsv', header=TRUE, sep = '\t', stringsAsFactors=FALSE) 
 md$tx <- decimal_date( ymd( md$date ))
 
@@ -61,3 +61,5 @@ axis(1)
 abline( v= pb$timeOf, col = 'red', lty = 3 )
 abline( v = td$timeOf, col = 'red', lty = 1 )
 dev.off() 
+
+
