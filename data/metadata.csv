@@ -1,0 +1,66 @@
+strain,virus,gisaid_epi_isl,genbank_accession,date,region,country,division,location
+Japan/AI/I-004/2020,ncov,EPI_ISL_407084,?,2020/01/25,"Japan Korea",Japan,Japan,Japan
+HKU-SZ-007b_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+Shenzhen/SZTH-003/2020,ncov,EPI_ISL_406594,?,2020/01/16,China,China,Guangdong,Shenzhen
+WHU02,ncov,?,MN988669,2020/01/02,China,China,Hubei,Wuhan
+Finland/1/2020,ncov,EPI_ISL_407079,?,2020/01/29,Europe,Finland,Lapland,Rovaniemi
+France/IDF0372/2020,ncov,EPI_ISL_406596,?,2020/01/23,Europe,France,"Ile De France",Paris
+Foshan/20SF211/2020,ncov,EPI_ISL_406536,?,2020/01/22,China,China,Guangdong,Foshan
+England/01/2020,ncov,EPI_ISL_407071,?,2020/01/29,Europe,"United Kingdom",England,England
+Guangdong/20SF201/2020,ncov,EPI_ISL_406538,?,2020/01/23,China,China,Guangdong,Guangdong
+Nonthaburi/61/2020,ncov,EPI_ISL_403962,?,2020/01/08,"Southeast Asia",Thailand,Nonthaburi,Bangkok
+USA-WA1/2020,ncov,EPI_ISL_404895,MN985325,2020/01/19,"North America",USA,Washington,Seattle
+Guangdong/20SF025/2020,ncov,EPI_ISL_403935,?,2020/01/15,China,China,Guangdong,Shenzhen
+HKU-SZ-005_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+Wuhan/HBCDC-HB-01/2019,ncov,EPI_ISL_402132,?,2019/12/30,China,China,Hubei,Wuhan
+Wuhan/WIV02/2019,ncov,EPI_ISL_402127,?,2019/12/30,China,China,Hubei,Wuhan
+Foshan/20SF207/2020,ncov,EPI_ISL_406534,?,2020/01/22,China,China,Guangdong,Foshan
+Guangdong/20SF174/2020,ncov,EPI_ISL_406531,?,2020/01/22,China,China,Guangdong,Zhuhai
+Guangdong/20SF040/2020,ncov,EPI_ISL_403937,?,2020/01/18,China,China,Guangdong,Zhuhai
+Australia/VIC01/2020,ncov,EPI_ISL_406844,?,2020/01/25,Oceania,Australia,Victoria,Clayton
+Wuhan-Hu-1/2019,ncov,EPI_ISL_402125,MN908947,2019/12/26,China,China,Hubei,Wuhan
+Wuhan/WIV07/2019,ncov,EPI_ISL_402130,?,2019/12/30,China,China,Hubei,Wuhan
+HKU-SZ-002a_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+Wuhan/IVDC-HB-05/2019,ncov,EPI_ISL_402121,?,2019/12/30,China,China,Hubei,Wuhan
+Zhejiang/Hangzhou-1/2020,ncov,EPI_ISL_406970,?,2020/01/20,China,China,Zhejiang,Hangzhou
+HKU-SZ-005b_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+HKU-SZ-001_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+Guangdong/20SF028/2020,ncov,EPI_ISL_403936,?,2020/01/17,China,China,Guangdong,Zhuhai
+Foshan/20SF210/2020,ncov,EPI_ISL_406535,?,2020/01/22,China,China,Guangdong,Foshan
+Wuhan/IPBCAMS-WH-05/2020,ncov,EPI_ISL_403928,?,2020/01/01,China,China,Hubei,Wuhan
+Guangzhou/20SF206/2020,ncov,EPI_ISL_406533,?,2020/01/22,China,China,Guangdong,Guangzhou
+HKU-SZ-007a_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+USA/CA2/2020,ncov,EPI_ISL_406036,MN994468,2020/01/22,"North America",USA,California,"Orange County"
+Wuhan/IVDC-HB-01/2019,ncov,EPI_ISL_402119,?,2019/12/30,China,China,Hubei,Wuhan
+Guangdong/20SF014/2020,ncov,EPI_ISL_403934,?,2020/01/15,China,China,Guangdong,Shenzhen
+USA/CA1/2020,ncov,EPI_ISL_406034,MN994467,2020/01/23,"North America",USA,California,"Los Angeles"
+Guangdong/20SF012/2020,ncov,EPI_ISL_403932,?,2020/01/14,China,China,Guangdong,Shenzhen
+HKU-SZ-007c_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+Zhejiang/WZ-01/2020,ncov,EPI_ISL_404227,?,2020/01/16,China,China,Zhejiang,Hangzhou
+Wuhan/WH03/2020,ncov,EPI_ISL_406800,?,2020/01/01,China,China,Hubei,Wuhan
+Germany/BavPat1/2020,ncov,EPI_ISL_406862,?,2020/01/28,Europe,Germany,Bavaria,Starnberg
+USA/IL1/2020,ncov,EPI_ISL_404253,MN988713,2020/01/21,"North America",USA,Illinois,Chicago
+Zhejiang/WZ-02/2020,ncov,EPI_ISL_404228,?,2020/01/17,China,China,Zhejiang,Hangzhou
+USA/AZ1/2020,ncov,EPI_ISL_406223,MN997409,2020/01/22,"North America",USA,Arizona,Phoenix
+Wuhan/WH01/2019,ncov,EPI_ISL_406798,?,2019/12/26,China,China,Hubei,Wuhan
+Wuhan/IPBCAMS-WH-03/2019,ncov,EPI_ISL_403930,?,2019/12/30,China,China,Hubei,Wuhan
+Shenzhen/SZTH-004/2020,ncov,EPI_ISL_406595,?,2020/01/16,China,China,Guangdong,Shenzhen
+HKU-SZ-004_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+WHU01,ncov,?,MN988668,2020/01/02,China,China,Hubei,Wuhan
+Wuhan/IVDC-HB-04/2020,ncov,EPI_ISL_402120,?,2020/01/01,China,China,Hubei,Wuhan
+Singapore/1/2020,ncov,EPI_ISL_406973,?,2020/01/23,"Southeast Asia",Singapore,Singapore,Singapore
+Wuhan/WIV05/2019,ncov,EPI_ISL_402128,?,2019/12/30,China,China,Hubei,Wuhan
+Wuhan/IPBCAMS-WH-04/2019,ncov,EPI_ISL_403929,?,2019/12/30,China,China,Hubei,Wuhan
+Shenzhen/SZTH-002/2020,ncov,EPI_ISL_406593,?,2020/01/13,China,China,Guangdong,Shenzhen
+Wuhan/WIV06/2019,ncov,EPI_ISL_402129,?,2019/12/30,China,China,Hubei,Wuhan
+Wuhan/WIV04/2019,ncov,EPI_ISL_402124,?,2019/12/30,China,China,Hubei,Wuhan
+Wuhan/IPBCAMS-WH-01/2019,ncov,EPI_ISL_402123,?,2019/12/24,China,China,Hubei,Wuhan
+Guangdong/20SF013/2020,ncov,EPI_ISL_403933,?,2020/01/15,China,China,Guangdong,Shenzhen
+Nonthaburi/74/2020,ncov,EPI_ISL_403963,?,2020/01/13,"Southeast Asia",Thailand,Nonthaburi,Bangkok
+France/IDF0373/2020,ncov,EPI_ISL_406597,?,2020/01/23,Europe,France,"Ile De France",Paris
+England/02/2020,ncov,EPI_ISL_407073,?,2020/01/29,Europe,"United Kingdom",England,England
+Wuhan/IPBCAMS-WH-02/2019,ncov,EPI_ISL_403931,?,2019/12/30,China,China,Hubei,Wuhan
+Taiwan/2/2020,ncov,EPI_ISL_406031,?,2020/01/23,China,Taiwan,Taiwan,Kaohsiung
+HKU-SZ-002b_2020,ncov,?,?,2020-01-XX,China,China,Guangdong,Shenzhen
+Wuhan/WH04/2020,ncov,EPI_ISL_406801,?,2020/01/05,China,China,Hubei,Wuhan
+Shenzhen/SZTH-001/2020,ncov,EPI_ISL_406592,?,2020/01/13,China,China,Guangdong,Shenzhen
