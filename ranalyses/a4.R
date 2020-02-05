@@ -11,6 +11,8 @@ NCPU <- 40
 
 library( treedater ) 
 library( lubridate )
+library( treestructure )
+library( phydynR )
 
 tr <- read.tree( 'nextstrain_ncov_tree_04feb.nwk' )
 md <- read.csv( '../data/metadata.csv', header=TRUE, stringsAsFactors=FALSE) 
@@ -33,6 +35,7 @@ td <- dater(
 	, searchRoot = 10
 	, temp=FALSE
 )
+
 
 
 #~ pb <- parboot( td , overrideTemp=FALSE, ncpu = 8, nreps = 500) 
@@ -234,6 +237,14 @@ expCoalescent <- function( g0 , pbtrees )
 res1 = expCoalescent( coargs[[1]][[1]], coargs[[1]][[2]] ) 
 res2 = expCoalescent( coargs[[2]][[1]], coargs[[2]][[2]] ) 
 res3 = expCoalescent( coargs[[3]][[1]], coargs[[3]][[2]] ) 
+
+ress <- list( res1, res2, res3 ) 
+dbls <- do.call( cbind, lapply( ress, '[[', 'dbls' ))
+cdbls <- rowMeans(dbls )
+
+print( quantile( cdbls, c(.025 , .5, .975) )  )
+print(  apply( dbls, MAR=2, FUN=function(x) quantile(x, c(.025, .5, .975)) ) )
+
 
 save.image( 'a4.rda' ) 
 
