@@ -25,6 +25,16 @@ pl = ShadedDensityCenter(
 pl <- pl + theme_minimal() + xlab('Days') + ylab('') + geom_vline( aes( xintercept = mean( tddbls )) ,col='red' ) 
 ggsave( plot=pl, file = 'a5dbl.svg', width = 3.85, height = 3.4 )
 
+svg('a5dbl2.svg',width = 3.85, height = 3.4 )
+plot( density( pbdbls ), xlab = 'Days', ylab = '', main = 'Doubling time', bty='n', axes=FALSE)
+axis(1)
+abline( v= pbdblsci, col = 'red', lty = 3 )
+abline( v = mean(tddbls), col = 'red', lty = 1 )
+dev.off() 
+
+
+
+#~ -----------------
 #tmrca 
 tmrca
 pbtmrca
@@ -41,3 +51,10 @@ pl = ShadedDensityCenter(
 )
 pl <- pl + theme_minimal() + xlab('') + ylab('') + geom_vline( aes( xintercept = tmrca) ,col='red' ) 
 ggsave( plot=pl, file = 'a5tmrca.svg', width = 3.85, height = 3.4 )
+
+svg('a5tmrca2.svg',width = 3.85, height = 3.4 )
+plot( density( pbtmrca ), xlab = '', ylab = '', main = 'TMRCA', bty='n', axes=FALSE)
+axis(1)
+abline( v= ci, col = 'red', lty = 3 )
+abline( v = tmrca, col = 'red', lty = 1 )
+dev.off() 
