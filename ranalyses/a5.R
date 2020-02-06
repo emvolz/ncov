@@ -146,7 +146,7 @@ other = c( s = '-parms$beta * s * i / (s + i )'
 
 parms = list(
 	beta =  .25* 365 # arbitrary initial condition
-	, gamma = gamma * 1/8.4 
+	, gamma = gamma * 365
 )
 x0 = c( i = 1 , s = 1e9, r = 0 )
 
